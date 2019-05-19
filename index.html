@@ -8,9 +8,93 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo.svg" width="#" height="#" alt="Логотип магазина мороженого Глэйси">
+        </a>
+        <ul class="site-navigation">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка и оплата</a></li>
+          <li><a href="about.html">О Компании</a></li>        
+        </ul>
+        <ul class="user-navigation-purchase">
+          <li class="search">Поиск</li>
+          <li class="login-link">Вход</li>
+          <li class="basket">Корзина</li>
+          <p class="header-contacts">
+            с 10 до 20, ежедневно</br>
+            8 812 450-25-25
+          </p>
+        </ul>
+        </nav>
+    </header>
+    <main class="container">
+      <!-- Начал делать, но не понял правильно ли, вроде бы как выделено красным, понял что не нужно пока)
+      <h1>Крем-брюле и пломбир с малиновым джемом</h1>
+      <buttom>Давайте оба!</buttom>
+      -->
+      <section class="feauters">
+      <h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+      <img src="img/icecream.jpg" width="#" height="#" alt="Мороженко">
+      <p>
+          Все наше мороженое изготавливается на собственном производстве, 
+          с использованием современного оборудования и проверенных временем технологий.
+      </p>
+      <img src="img/leaf.jpg" width="#" height="#" alt="Листочек">
+      <p>
+          Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
+          Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+      </p>
+      <img src="img/cow.jpg" width="#" height="#" alt="Коровка">
+      <p>
+          Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
+          с которыми нас связывает долговременное сотрудничество.
+      </p>
+      <img src="img/thermometer.jpg" width="#" height="#" alt="Градусник">
+    </section>
+    <section class="new">
+      <h3>Новое в нашем блоге</h3>
+      <p class="laying">
+        <a href="laying.html">10 способов сервировки фруктовых щербетов к столу</a>
+      </p>
+    </section>
+    <section class="notification">
+        <h3 class="visually-hidden">Подписка</h3>
+        <p>
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
+            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
+        </p>      
+        <div>Электронная почта</div>
+        <button>Отправить</button>
+    </section>
+    </main> 
+<footer class="main-footer">
+  <div class="footer-social">
+    <ul>
+      <li><a class="soccial-button" href="#">Твиттер</a></li>
+      <li><a class="soccial-button" href="#">Инстаграм</a></li>
+      <li><a class="soccial-button" href="#">Фейсбук</a></li>
+      <li><a class="soccial-button" href="#">Вконтакте</a></li>
+    </ul>
+  </div>
+  <section class="info">
+    <ul>
+      <li><a class="heart" href="#">Для поставщиков</a></li>
+      <li><a href="#">О производстве</a></li>
+      <li><a href="#">Наши документы</a></li>
+      <li><a href="#">Экологические стандарты</a></li>
+    </ul>
+  </section>
+  <p class="footer-copyright">
+    <a href="https://htmlacademy.ru"><img src="img/html-logo.jpg"></a>
+    Сделано в<a href="https://htmlacademy.ru">HTML Academy</a>© 2019
+  </p>
+</footer>
+<section class="modal modal-login">
+    <h2>Личный кабинет</h2>
+    <p>Введите свой логин и пароль.</p>
+    <!-- Здесь будет форма -->
+    <span class="modal-close">x</span>
   </body>
-  <footer></footer>
 </html>
