@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Мороженое, крембрюле, малиновый джем, пломбир">
     <meta name="description" content="Онлайн магазин самого разнообразного мороженого">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
@@ -26,14 +28,15 @@
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>        
         </ul>
-        <ul class="user-navigation-purchase">
-          <li class="search">Поиск
+        <ul class="user-navigation">
+          <li><div class="visually-hidden">Поиск</div>
             <img src="img/magnifier.svg" width="17" height="17">
             <form action="catalog.html" method="GET">
               <input type="search" name="search" placeholder="Что ищем?">
             </form>
           </li>
-          <li class="login-link"> Вход
+          <li class="login-link"> 
+            <img src="img/enter.svg" width="21" height="19">Вход
             <form action="/echo" method="POST">
               <input type="text" name="login" id="login-field" placeholder="Электронная почта" required>
               <input type="password" name="password" id="password-field" placeholder="Пароль" required>
@@ -47,11 +50,12 @@
         </ul>
           <p class="header-worktime">
           с 10 до 20, ежедневно</br>
-          8 812 450-25-25 </p>
+          <span class="tel-number">8 812 450-25-25</span></p>
         </nav>
     </header>
     <main class="container">
-        <ul class="andvantages">
+      <div class="feature-item">
+        <ul class="advantages">
             <li><h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3></li>
             <li><img src="img/icecream.svg" width="49" height="49" alt="Мороженко">Все наше мороженое изготавливается на собственном производстве, 
               с использованием современного оборудования и проверенных временем технологий.
@@ -68,29 +72,30 @@
                 который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </li>
         </ul>
+      </div>
     <section class="news">
       <h3>Новое в нашем блоге</h3>
       <p class="laying">
         <a href="laying.html">10 способов сервировки фруктовых щербетов к столу</a>
       </p>
-      <img src="img/background-news.png" height="220" width="560">
     </section>
+      <div class="notification-background">
     <section class="notification">
         <h3 class="visually-hidden">Подписка</h3>
         <p>
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
         </p>      
-        <form action="/echto" method="POST">
-        <input type="text" name="email" placeholder="Электронная почта">
-        <input type="submit" class="button" value="Отправить">
+        <form action="/echo" method="POST">
+          <input type="text" name="email" placeholder="Электронная почта">
+          <input type="submit" class="button" value="Отправить">
         </form>
-        <img src="img/backround-notification.svg" height="220" width="560">
+      </div>
     </section>
     </main> 
 <footer class="main-footer">
   <div class="footer-social">
-    <ul>
+    <ul class="social-list">
       <li><a class="soccial-button" href="https://twitter.com/">Твиттер
         <img src="img/twitter.svg" width="32" height="32">
           </a>
