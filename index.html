@@ -12,9 +12,10 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
+        <div class="main-navigation-wrapper">
+          <a class="main-header-logo" href="index.html">
           <img src="img/gllacy.svg" width="154" height="64" alt="Логотип магазина мороженого Глэйси">
-        </a>
+          </a>
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
             <ul class="site-sections">
@@ -29,15 +30,19 @@
           <li><a href="about.html">О Компании</a></li>        
         </ul>
         <ul class="user-navigation">
-          <li><div class="visually-hidden">Поиск</div>
-            <img src="img/magnifier.svg" width="17" height="17">
-            <form action="catalog.html" method="GET">
+          <li>
+            <a class="search-button" href="#">
+              <span>Поиск</span>
+            </a>
+            <form action="catalog.html" method="GET" class="visually-hidden">
               <input type="search" name="search" placeholder="Что ищем?">
             </form>
           </li>
           <li class="login-link"> 
-            <img src="img/enter.svg" width="21" height="19">Вход
-            <form action="/echo" method="POST">
+            <a class="login-button" href="#">
+              <span>Вход</span>
+              </a>
+            <form action="/echo" method="POST" class="visually-hidden">
               <input type="text" name="login" id="login-field" placeholder="Электронная почта" required>
               <input type="password" name="password" id="password-field" placeholder="Пароль" required>
               <input type="submit" value="Войти" class="button">
@@ -45,15 +50,21 @@
               <a href="###" class="forgoten-password">Новая регистрация</a> <!--Присвоил тот же класс, так как стиль одинаковый и стоит ли их выносить за div?-->
             </form>
           </li>
-          <li class="basket">Корзина
+          <li class="basket">
+            <a class="basket-button" href="#">Корзина</a>
           </li>
         </ul>
+      </div>
+    </div>
+        <div class="contacts">
           <p class="header-worktime">
           с 10 до 20, ежедневно</br>
           <span class="tel-number">8 812 450-25-25</span></p>
+        </div>
         </nav>
     </header>
     <main class="container">
+      <div class="feature-item-wrapper">
       <div class="feature-item">
         <ul class="advantages">
             <li><h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3></li>
@@ -73,6 +84,8 @@
             </li>
         </ul>
       </div>
+    </div>
+    <div class="news-wrapper">
     <section class="news">
       <h3>Новое в нашем блоге</h3>
       <p class="laying">
@@ -86,14 +99,16 @@
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
         </p>      
-        <form action="/echo" method="POST">
+        <form action="/echo" method="POST" class="entry-field">
           <input type="text" name="email" placeholder="Электронная почта">
           <input type="submit" class="button" value="Отправить">
         </form>
       </div>
     </section>
+    </div>
     </main> 
 <footer class="main-footer">
+  <div class="footer-wrapper">
   <div class="footer-social">
     <ul class="social-list">
       <li><a class="soccial-button" href="https://twitter.com/">Твиттер
@@ -114,7 +129,7 @@
       </li>
     </ul>
   </div>
-    <div section class="info">
+    <div class="info">
     <ul>
       <li><a class="heart" href="#">
         <img src="img/heart.svg" width="15" height="13"> Для поставщиков
@@ -125,13 +140,13 @@
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
   </div>
-      <div class="footer-copyright">
+  <div class="footer-copyright">
     <a href="https://htmlacademy.ru"><img src="img/html-logo.svg" width="108" height="39"></a>
     Сделано в<a href="https://htmlacademy.ru">HTML Academy</a>© 2019
-      </div>
+  </div>
+  </div>
 </footer>
-<!--Форму обратной связи вынес пока сюда, так как она ещё не размечена в html, так как по ДЗ выделена красным-->
-<section>
+<section class="visually-hidden">
   <p class="answer">Мы обязательно вам ответим!</p>
   <button type="button"><img src="img/close.svg" width="17" height="18"></button>
   <form actio="/echo" method="POST">
@@ -141,5 +156,5 @@
     <input type="submit" class="button" value="Отправить">
 </form>
 </section>
-  </body>
+</body>
 </html>
