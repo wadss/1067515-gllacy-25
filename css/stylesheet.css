@@ -1,5 +1,4 @@
 body {
-max-width: 1200px;
 padding: 0;
 margin: 0;
 font-family: "Roboto", Arial, sans-serif;
@@ -11,7 +10,11 @@ background-color: #859e90;
 }
 
 .visually-hidden {
-display:none;
+position: absolute;
+clip: rect(0 0 0 0);
+width: 1px;
+height: 1px;
+margin: -1px;
 }
 
 .button {
@@ -27,8 +30,12 @@ color: #ffffff;
 
 }
 
-.button:hover { background: #f26843  }
-.button:active { background: linear-gradient(#e74a35, #f26843) #f26843; }
+.button:hover { 
+background: #f26843  
+}
+.button:active { 
+background: linear-gradient(#e74a35, #f26843) #f26843; 
+}
 
 .main-navigation {
 font-size: 16px;
@@ -85,7 +92,7 @@ list-style: none;
 }
 
 .feature-item {
-background-image: url("/img/background-advantages-clip.png");
+background-image: url("/img/background-123-clip.png");
 background-repeat: repeat;
 border-radius: 10px
 }
@@ -148,7 +155,8 @@ border: solid 1px #d8d8d6;
 font-size: 0px;
 }
 
-.login-link {
+.login-link,
+.basket {
 font-weight: 500;
 line-height: 1.14;
 }
@@ -176,37 +184,49 @@ font-size: 12px;
 color: #fefefe;
 
 }
-/*.login-link button {
-    width: 93px;
-    height: 32px;
-    background-color: #9db1a6;
-    color: #ffffff;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    }*/
-
-}
 
 .search-button {
+margin-top:5px;
+display: flex;
+width:33px;
+height: 33px;
+border-radius: 50%;
 background-color: #9db1a6;
+background-image: url("/img/magnifier.svg");
+background-repeat: no-repeat;
+background-position: center;
 
 }
 
 .login-button {
+margin-top:5px;
 display: flex;
 width:93px;
 height:32px;
 border-radius: 20px;
 background-color: #9db1a6;
+background-image: url("/img/enter.svg");
+background-repeat: no-repeat;
+background-position: bottom 7px left 16px;
+justify-content: center;
+align-items:center;
+padding-left:15px;
 }
 
 .basket-button {
+margin-top:5px;
 display: flex;
 width:100px;
 height:32px;
 border-radius: 20px;
 background-color: #9db1a6;
+background-image: url("/img/basket.svg");
+background-repeat: no-repeat;
+background-position: bottom 7px left 16px;
+justify-content: center;
+align-items:center;
+padding-left:15px;
+
 }
 
 /*Флексим*/
@@ -218,17 +238,15 @@ min-height: 150px;
 
 .main-navigation {
 flex-direction: column;
-min-height: 150px;
+max-width:1145px;
 display: flex;
-
-
+margin-left: auto;
+margin-right: auto;
 }
 
 .main-header-logo {
 height:64px;
 width:154px;
-/*display: block;*/
-
 }
 
 .site-navigation {
@@ -246,6 +264,7 @@ width: 270px;
 margin:0px;
 padding: 0px;
 min-height: 74px;
+align-items: flex-end;
 
 }
 
@@ -254,17 +273,19 @@ display: flex;
 width: 200px;
 min-height: 60px;
 align-self: flex-end;
+justify-content: flex-end;
 
 }
 
 .main-navigation-wrapper {
+min-height: 150px;
 width: 100%;
 min-height:74px;
-margin-left: 27px;
-margin-right:27px;
 margin-bottom: 10px;
 padding: 0;
 display:flex;
+margin-left: auto;
+margin-right: auto;
 justify-content: space-between;
 
 }
@@ -273,21 +294,7 @@ justify-content: space-between;
 display: flex;
 min-height: 305px;
 width:100%;
-
-}
-
-.feature-item-wrapper {
-margin-left: 27px;
-margin-right:27px;
-margin-bottom:40px;
-
-}
-
-.news-wrapper {
-display:flex;
-margin-left: 27px;
-margin-right:27px;
-justify-content: space-between;
+margin-bottom: 40px;
 
 }
 
@@ -297,15 +304,9 @@ margin-top: 10px;
 
 }
 
-.footer-wrapper {
-display:flex;
-margin-left: 27px;
-margin-right: 27px;
-justify-content: space-between;
-
-}
 
 .footer-social {
+display: flex;
 margin: 0;
 min-height: 60px;
 width:200px;
@@ -313,12 +314,50 @@ width:200px;
 }
 
 .info {
+display:flex;
+flex-direction: column;
 min-height: 60px;
 width:260px;
 
 }
 
 .footer-copyright {
+display:flex;
 min-height: 80px;
 width: 210px;
+}
+
+.container {
+display:flex;
+margin-left: auto;
+margin-right: auto;
+justify-content: space-between;
+max-width: 1160px;
+}
+
+.ice-cream-catalog {
+margin-bottom: 40px;
+}
+
+.catalog-item {
+position: relative;
+z-index: 1;
+display: inline-block;
+width: 267px;
+margin-bottom: 39px;
+margin-right: 26px;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+vertical-align: top
+}
+
+.catalog-item:nth-child(4n) {
+margin-right: 0px;
+}
+
+.price {
+font-size: 45px;
+font-weight: bold;
+line-height: 1;
 }
