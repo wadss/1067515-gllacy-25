@@ -455,6 +455,7 @@ textarea::placeholder {
   line-height: 44px;
   font-weight: 700;
   border-radius: 31px;
+  margin-bottom: 5px;
 }
 .bttn-tiny {
   padding-left: 17px;
@@ -2161,6 +2162,9 @@ textarea::placeholder {
 .page-footer-link-content {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+.bold {
+  font-weight: bold;
+}
 .page-footer-copyright-label {
   font-size: 12px;
   line-height: 18px;
@@ -2467,4 +2471,101 @@ textarea::placeholder {
   to {
     opacity: 1;
   }
+}
+
+
+
+
+
+.user-navigation {
+  display: flex;
+  list-style: none;
+}
+.user-navigation a {
+  color: #ffffff;
+}
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ffbc9e;
+}
+.entry-field input:first-child {
+  width: 368px;
+  height: 44px;
+  border-radius: 5px;
+  border: solid 1px #d8d8d6;
+  }
+.login-link {
+  font-weight: 500;
+  line-height: 1.14;
+  }
+.search-button {
+  background-color: #9db1a6; 
+  }
+  .search-button {
+  padding-top: 7px;
+  display: flex;
+  width: 33px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #9db1a6;
+  align-content: center;
+  justify-content: center;
+  }
+.login-button {
+  padding-top: 5px;
+  display: flex;
+  width:93px;
+  height:27px;
+  border-radius: 20px;
+  background-color: #9db1a6;
+  align-content: center;
+  justify-content: center;
+  }
+.basket-button {
+  padding-top: 5px;
+  display: flex;
+  width:100px;
+  height:27px;
+  border-radius: 20px;
+  background-color: #9db1a6;
+  align-content: center;
+  justify-content: center;
+  }
+.search-field {
+  left: 637px;
+  position: absolute;
+  display: none;
+  background-color: #f8f7f4;
+  width: 348px;
+  height: 90px;
+  padding-top: 20px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.user-navigation > li:hover .search-field,
+.user-navigation > li:hover .search-field {
+  display: block;
+  width: 348px;
+  height: 90px;
+  z-index: 1;
+}
+.login-form {
+  position: absolute;
+  display: none;
+}
+.user-navigation > li:hover .login-form,
+.user-navigation > li:hover .login-form {
+  display: block;
+  z-index: 1;
+}
+
+input[type=search] {
+  width: 305px;
+  height: 44px;
+  border: 1px solid #d4d4d3;
+  border-radius: 5px;
+  padding-left: 10px;
+  z-index: 2;
+  color: #999999;
 }
