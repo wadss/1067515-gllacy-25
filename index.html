@@ -55,37 +55,55 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header-bttn  page-header-bttn-search">
-          Поиск
-          <div class="page-header-popup-wrap  page-header-popup-wrap-extra-space">
-            <form class="page-header-search-form" id="search-form" action="/" method="get">
-              <input type="text" name="search-query" placeholder="Что ищем?">
-            </form>
-          </div>
-        </div>
-        <div class="page-header-user">
-          <div class="page-header-bttn  page-header-bttn-login">
-            Вход
-            <div class="page-header-popup-wrap">
-              <form class="login-form" id="login-form" action="/" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-                <input class="bttn" type="submit" value="Войти">
-                <div class="login-form-links">
-                  <a class="login-form-link" href="#">
-                    <span class="login-form-link-content">Забыли пароль?</span>
-                  </a>
-                  <a class="login-form-link" href="#">
-                    <span class="login-form-link-content">Новая регистрация</span>
-                  </a>
+        <ul class="user-navigation">
+            <li>
+              <a class="search-button" href="#">
+                <span class="visually-hidden">Поиск</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+                height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+                <path class="magnifier" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+                S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+                S11,4.019,11,6.5S8.981,11,6.5,11z"/>
+                </svg>
+              </a>
+              <form action="catalog.html" method="GET" class="search-field">
+                <input type="search" name="search" placeholder="Что ищем?">
+              </form>
+            </li>
+            <li class="login-link"> 
+              <a class="login-button" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+                  <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+                  <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
+                </svg>
+                <span>Вход</span>
+                </a>
+              <form action="/echo" method="POST" class="login-form">
+                <input type="text" name="login" id="login-field" placeholder="Электронная почта" class="txt" required>
+                <input type="password" name="password" id="password-field" placeholder="Пароль" class="txt" required>
+                <input type="submit" value="Войти" class="button">
+                <div class="restore-pass">
+                <a href="###" class="forgoten-password">Забыли пароль?</a>
+                <a href="###" class="forgoten-password">Новая регистрация</a>
                 </div>
               </form>
-            </div>
-          </div>
-          <div class="page-header-bttn  page-header-bttn-basket">
-            Пусто
-          </div>
-        </div>
+            </li>
+            <li class="basket">
+              <a class="basket-button" href="#">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+               <g>
+                 <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+                   L17.372,13z"/>
+                 <circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
+                 <circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
+               </g>
+               </svg>
+                Пусто
+              </a>
+            </li>
+          </ul>
         <div class="page-header-contacts">
           <div class="page-header-contacts-days">С 10 до 20, ежедневно </div>
           <div class="page-header-contacts-tel">8 812 450-25-25</div>
@@ -96,7 +114,7 @@
           <div class="promo-slider-slides">
             <div class="promo-slider-slide" id="promo-slide-1">
               <h2 class="promo-slider-slide-title">Крем-брюле и пломбир с малиновым джемом</h2>
-              <a href="#" class="bttn  bttn-large" style="margin-bottom: 5px;">Давайте оба!</a>
+              <a href="#" class="bttn  bttn-large">Давайте оба!</a>
             </div>
             <div class="promo-slider-slide" id="promo-slide-2">
               <h2 class="promo-slider-slide-title">Шоколадный пломбир и лимонный сорбет</h2>
@@ -286,7 +304,7 @@
             <ul class="page-footer-nav-items">
               <li class="page-footer-nav-item  page-footer-nav-item-like">
                 <a class="page-footer-link" href="#">
-                  <span class="page-footer-link-content">Для поставщиков</span>
+                  <span class="page-footer-link-content bold">Для поставщиков</span>
                 </a>
               </li>
               <li class="page-footer-nav-item">
@@ -312,7 +330,9 @@
           </div>
         </div>
         <div class="page-footer-copyright">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="page-footer-copyright-logo" src="img/htmacademy-logo.png" width="108" height="38" alt="HTML Academy">
+          </a>
           <div class="page-footer-copyright-label">
             Сделано в
             <a class="page-footer-link" href="https://htmlacademy.ru">
