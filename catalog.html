@@ -53,34 +53,42 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header-bttn  page-header-bttn-search">
-          Поиск
-          <div class="page-header-popup-wrap  page-header-popup-wrap-extra-space">
-            <form class="page-header-search-form" id="search-form" action="/" method="get">
-              <input type="text" name="search-query" placeholder="Что ищем?">
+        <ul class="user-navigation">
+          <li>
+            <a class="search-button" href="#">
+              <span class="visually-hidden">Поиск</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+              height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+              <path class="magnifier" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+              S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+              S11,4.019,11,6.5S8.981,11,6.5,11z"/>
+              </svg>
+            </a>
+            <form action="catalog.html" method="GET" class="search-field">
+              <input type="search" name="search" placeholder="Что ищем?">
             </form>
-          </div>
-        </div>
-        <div class="page-header-user">
-          <div class="page-header-bttn  page-header-bttn-login">
-            Вход
-            <div class="page-header-popup-wrap">
-              <form class="login-form" id="login-form" action="/" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-                <input class="bttn" type="submit" value="Войти">
-                <div class="login-form-links">
-                  <a class="login-form-link" href="#">
-                    <span class="login-form-link-content">Забыли пароль?</span>
-                  </a>
-                  <a class="login-form-link" href="#">
-                    <span class="login-form-link-content">Новая регистрация</span>
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="page-header-bttn  page-header-bttn-basket-full">
+          </li>
+          <li class="login-link"> 
+            <a class="login-button" href="#">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+                <polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+                <path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
+              </svg>
+              <span>Вход</span>
+              </a>
+            <form action="/echo" method="POST" class="login-form">
+              <input type="text" name="login" id="login-field" placeholder="Электронная почта" required>
+              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+              <input type="submit" value="Войти" class="bttn bttn1">
+              <div class="restore-pass">
+              <a href="###" class="forgoten-password">Забыли пароль?</a>
+              <a href="###" class="forgoten-password">Новая регистрация</a>
+              </div>
+            </form>
+          </li>
+          </ul>
+          <a class="page-header-bttn  page-header-bttn-basket-full">
             2 товара
             <div class="page-header-popup-wrap">
               <table class="basket-table">
@@ -133,12 +141,12 @@
                 </tfoot>
               </table>
             </div>
-          </div>
-        </div>
-        <div class="page-header-contacts">
+          </a>
+        <div class="page-header-contacts">  
           <div class="page-header-contacts-days">С 10 до 20, ежедневно </div>
           <div class="page-header-contacts-tel">8 812 450-25-25</div>
         </div>
+      </div>
       </header>
       <main class="page-content">
         <div class="breadcrumbs">
@@ -161,115 +169,115 @@
           </ul>
         </div>
         <section class="catalog">
-          <h2 class="catalog-header">Сливочное мороженое</h2>
-          <section class="catalog-filter">
+          <h2 class="catalog__header">Сливочное мороженое</h2>
+          <section class="catalog__filter">
             <h3 class="visually-hidden">Отфильтровать список:</h3>
             <form class="filter-form" id="filter-form" action="/" method="get">
-              <fieldset class="filter-form-item">
-                <legend class="filter-form-title">Сортировка:</legend>
-                <select class="filter-form-sort" name="sort">
+              <fieldset class="filter-form__item">
+                <legend class="filter-form__title">Сортировка:</legend>
+                <select class="filter-form__sort" name="sort">
                   <option value="pop">по популярности</option>
                   <option value="expensive">сначала недорогие</option>
                   <option value="cheap">сначала дорогие</option>
                   <option value="fatcontent">по жирности</option>
                 </select>
-                <span class="filter-form-sort-icon"></span>
+                <span class="filter-form__sort-icon"></span>
               </fieldset>
-              <fieldset class="filter-form-item">
-                <legend class="filter-form-title">
+              <fieldset class="filter-form__item">
+                <legend class="filter-form__title">
                   Цена:
-                  <span class="filter-form-price-label">
-                  <output class="catalog-lower-cost" name="lower-cost">100 руб.</output> –
-                  <output class="catalog-upper-cost" name="upper-cost">500 руб.</output>
+                  <span class="filter-form__price-label">
+                  <output class="catalog__lower-cost" name="lower-cost">100 руб.</output> –
+                  <output class="catalog__upper-cost" name="upper-cost">500 руб.</output>
                 </span>
                 </legend>
-                <div class="filter-form-price-range">
+                <div class="filter-form__price-range">
                   От
                   <input type="text" name="min-price" value="100" pattern="[0-9]*"> до
                   <input type="text" name="max-price" value="500" pattern="[0-9]*">
-                  <div class="filter-form-price-control">
-                    <div class="filter-form-range-scale">
-                      <div class="filter-form-range-bar"></div>
+                  <div class="filter-form__price-control">
+                    <div class="filter-form__range-scale">
+                      <div class="filter-form__range-bar"></div>
                     </div>
-                    <div class="filter-form-range-toggle  filter-form-range-toggle-min"></div>
-                    <div class="filter-form-range-toggle  filter-form-range-toggle-max"></div>
+                    <div class="filter-form__range-toggle  filter-form__range-toggle--min"></div>
+                    <div class="filter-form__range-toggle  filter-form__range-toggle--max"></div>
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="filter-form-item">
-                <legend class="filter-form-title">Жирность:</legend>
-                <ul class="filter-form-fatcontent">
-                  <li class="filter-form-fatcontent-item">
-                    <label class="filter-form-radio-control">
+              <fieldset class="filter-form__item">
+                <legend class="filter-form__title">Жирность:</legend>
+                <ul class="filter-form__fatcontent">
+                  <li class="filter-form__fatcontent-item">
+                    <label class="filter-form__radio-control">
                       <input type="radio" name="fatcontent" value="0">
-                      <span class="filter-form-radio-icon"></span>
-                      <span class="filter-form-radio-label">0%</span>
+                      <span class="filter-form__radio-icon"></span>
+                      <span class="filter-form__radio-label">0%</span>
                     </label>
                   </li>
-                  <li class="filter-form-fatcontent-item">
-                    <label class="filter-form-radio-control">
+                  <li class="filter-form__fatcontent-item">
+                    <label class="filter-form__radio-control">
                       <input type="radio" name="fatcontent" value="b10" checked disabled>
-                      <span class="filter-form-radio-icon"></span>
-                      <span class="filter-form-radio-label">до 10%</span>
+                      <span class="filter-form__radio-icon"></span>
+                      <span class="filter-form__radio-label">до 10%</span>
                     </label>
                   </li>
-                  <li class="filter-form-fatcontent-item">
-                    <label class="filter-form-radio-control">
+                  <li class="filter-form__fatcontent-item">
+                    <label class="filter-form__radio-control">
                       <input type="radio" name="fatcontent" value="b30" disabled>
-                      <span class="filter-form-radio-icon"></span>
-                      <span class="filter-form-radio-label">до 30%</span>
+                      <span class="filter-form__radio-icon"></span>
+                      <span class="filter-form__radio-label">до 30%</span>
                     </label>
                   </li>
-                  <li class="filter-form-fatcontent-item">
-                    <label class="filter-form-radio-control">
+                  <li class="filter-form__fatcontent-item">
+                    <label class="filter-form__radio-control">
                       <input type="radio" name="fatcontent" value="a30">
-                      <span class="filter-form-radio-icon"></span>
-                      <span class="filter-form-radio-label">выше 30%</span>
+                      <span class="filter-form__radio-icon"></span>
+                      <span class="filter-form__radio-label">выше 30%</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter-form-item">
-                <legend class="filter-form-title">Наполнители:</legend>
-                <ul class="filter-form-fillers">
-                  <li class="filter-form-fillers-item">
-                    <label class="filter-form-checkbox-control">
+              <fieldset class="filter-form__item">
+                <legend class="filter-form__title">Наполнители:</legend>
+                <ul class="filter-form__fillers">
+                  <li class="filter-form__fillers-item">
+                    <label class="filter-form__checkbox-control">
                       <input type="checkbox" name="filler-chocolate" checked>
-                      <span class="filter-form-checkbox-icon"></span>
-                      <span class="filter-form-checkbox-label">шоколадные</span>
+                      <span class="filter-form__checkbox-icon"></span>
+                      <span class="filter-form__checkbox-label">шоколадные</span>
                     </label>
                   </li>
-                  <li class="filter-form-fillers-item">
-                    <label class="filter-form-checkbox-control">
+                  <li class="filter-form__fillers-item">
+                    <label class="filter-form__checkbox-control">
                       <input type="checkbox" name="filler-sugar" checked disabled>
-                      <span class="filter-form-checkbox-icon"></span>
-                      <span class="filter-form-checkbox-label">сахарные присыпки</span>
+                      <span class="filter-form__checkbox-icon"></span>
+                      <span class="filter-form__checkbox-label">сахарные присыпки</span>
                     </label>
                   </li>
-                  <li class="filter-form-fillers-item">
-                    <label class="filter-form-checkbox-control">
+                  <li class="filter-form__fillers-item">
+                    <label class="filter-form__checkbox-control">
                       <input type="checkbox" name="filler-fruit" disabled>
-                      <span class="filter-form-checkbox-icon"></span>
-                      <span class="filter-form-checkbox-label">фрукты</span>
+                      <span class="filter-form__checkbox-icon"></span>
+                      <span class="filter-form__checkbox-label">фрукты</span>
                     </label>
                   </li>
-                  <li class="filter-form-fillers-item">
-                    <label class="filter-form-checkbox-control">
+                  <li class="filter-form__fillers-item">
+                    <label class="filter-form__checkbox-control">
                       <input type="checkbox" name="filler-syrup">
-                      <span class="filter-form-checkbox-icon"></span>
-                      <span class="filter-form-checkbox-label">сиропы</span>
+                      <span class="filter-form__checkbox-icon"></span>
+                      <span class="filter-form__checkbox-label">сиропы</span>
                     </label>
                   </li>
-                  <li class="filter-form-fillers-item">
-                    <label class="filter-form-checkbox-control">
+                  <li class="filter-form__fillers-item">
+                    <label class="filter-form__checkbox-control">
                       <input type="checkbox" name="filler-jam">
-                      <span class="filter-form-checkbox-icon"></span>
-                      <span class="filter-form-checkbox-label">джемы</span>
+                      <span class="filter-form__checkbox-icon"></span>
+                      <span class="filter-form__checkbox-label">джемы</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <input class="filter-form-bttn" type="submit" value="Применить">
+              <input class="filter-form__btn" type="submit" value="Применить">
             </form>
           </section>
           <section class="catalog-list">
@@ -516,6 +524,7 @@
           </div>
         </section>
       </main>
+      <div class="content-wrapper">
       <footer class="page-footer">
         <section class="social-links">
           <h2 class="visually-hidden">Мы в социальных сетях:</h2>
@@ -562,12 +571,13 @@
           </a>
           <div class="page-footer-copyright-label">
             Сделано в
-            <a class="page-footer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <a class="page-footer-link" href="https://htmlacademy.ru">
               <span class="page-footer-link-content">HTML Academy</span>
             </a> © 2016
           </div>
         </div>
       </footer>
+      </div>
     </div>
   </div>
   <script src="js/js.js"></script>
